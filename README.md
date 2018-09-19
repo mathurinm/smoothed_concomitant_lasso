@@ -14,9 +14,11 @@ The API of the ``smoothconco`` code is designed for compatibility with the [scik
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-from smoothed_concomitant import SC_path
-from SBvG import SBvG_path
-from data_generation import generate_data
+
+from smoothconco import SCRegressor
+from smoothconco.smoothed_concomitant import SC_path
+from smoothconco.SBvG import SBvG_path
+from smoothconco.tools import generate_data
 
 # Generate dataset
 
@@ -65,10 +67,10 @@ print("Sigma estimation:")
 print("True sigma")
 print(sigma)
 
-print "hatsigma for SC"
+print("hatsigma for SC")
 print(sigmas[0])
 
-print "hatsigma for SBvG"
+print("hatsigma for SBvG")
 print(sigmas_SBvG[0])
 
 # Beta performance
